@@ -32,7 +32,8 @@
 ```
    Alex Korp,3000  
    Nikita Borisenko,2000  
-   Sitarama Raju,1000```
+   Sitarama Raju,1000
+```
 
 Ваше завдання - розробити функцію **total\_salary(path)**, яка аналізує цей файл і повертає загальну та середню суму заробітної плати всіх розробників.
 
@@ -73,7 +74,8 @@
 
 ```
     total, average = total_salary("path/to/salary_file.txt")  
-    print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")```
+    print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
+```
 
 **Очікуваний результат:**
 
@@ -88,7 +90,8 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
    60b90c2413067a15887e1ae2,Vika,1  
    60b90c2e13067a15887e1ae3,Barsik,2  
    60b90c3b13067a15887e1ae4,Simon,12  
-   60b90c4613067a15887e1ae5,Tessi,5 ```
+   60b90c4613067a15887e1ae5,Tessi,5
+```
 
 Ваше завдання - розробити функцію **get\_cats\_info(path)**, яка читає цей файл та повертає список словників з інформацією про кожного кота.
 
@@ -127,7 +130,8 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 ```
    cats_info = get_cats_info("path/to/cats_file.txt")  
-   print(cats_info)```
+   print(cats_info)
+```
 
 **Очікуваний результат:**
 
@@ -138,7 +142,8 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
     {"id": "60b90c2e13067a15887e1ae3", "name": "Barsik", "age": "2"},
     {"id": "60b90c3b13067a15887e1ae4", "name": "Simon", "age": "12"},
     {"id": "60b90c4613067a15887e1ae5", "name": "Tessi", "age": "5"},  
-]```
+]
+```
 
 **Завдання 3**
 
@@ -185,7 +190,9 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 Якщо виконати скрипт та передати йому абсолютний шлях до директорії як параметр.
 
-``` python hw03.py /шлях/до/вашої/директорії```
+```
+python hw03.py /шлях/до/вашої/директорії
+```
 
 Це призведе до виведення в терміналі списку всіх піддиректорій та файлів у вказаній директорії з використанням різних кольорів для піддиректорій та файлів, що полегшить візуальне сприйняття файлової структури.
 
@@ -207,7 +214,9 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 Напишіть консольного бота помічника, який розпізнаватиме команди, що вводяться з клавіатури, та буде відповідати відповідно до введеної команди.
 
-```   ☝ Бот помічник повинен стати для нас прототипом застосунку-асистента, який ми розробимо в наступних домашніх завданнях. Застосунок-асистент в першому наближенні повинен вміти працювати з книгою контактів та календарем.```
+```
+☝ Бот помічник повинен стати для нас прототипом застосунку-асистента, який ми розробимо в наступних домашніх завданнях. Застосунок-асистент в першому наближенні повинен вміти працювати з книгою контактів та календарем.
+```
 
 У цій домашній роботі зосередимося на інтерфейсі самого бота. Найпростіший і найзручніший на початковому етапі розробки інтерфейс - це консольний застосунок CLI (Command Line Interface). CLI достатньо просто реалізувати.
 
@@ -300,17 +309,24 @@ def main():
         else:
             print("Invalid command.")
 if __name__ == "__main__":
-    main()```
+    main()
+```
 
 Коли програма запускається, вона виводить повідомлення "Welcome to the assistant bot!" і входить в нескінчений цикл, де вона очікує введення команди від користувача while True.
 
 Якщо користувач вводить "close" або "exit", програма виводить "Good bye!" та завершує роботу. За це відповідає блок коду:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   if command in ["close", "exit"]:      print("Good bye!")      break   `
+```
+if command in ["close", "exit"]:
+    print("Good bye!")
+    break
+```
 
 Якщо користувач вводить "hello", програма виводить "How can I help you?". Якщо ж введена команда не відповідає жодному з цих варіантів, програма виводить "Invalid command.".
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Welcome to the assistant bot!  Enter a command: test  Invalid command.  Enter a command: hello  How can I help you?  Enter a command: exit  Good bye!   `
+```
+Welcome to the assistant bot!  Enter a command: test  Invalid command.  Enter a command: hello  How can I help you?  Enter a command: exit  Good bye!
+```
 
 Цей код створює простий інтерактивний командний рядок, який реагує на обмежений набір команд. Ми реалізували цикл запит-відповідь, який буде служити відмінною основою для додавання функціональності в майбутніх домашніх завданнях.
 
@@ -335,7 +351,8 @@ def main():
             print("Invalid command.")
 
 if __name__ == "__main__":
-    main()```
+    main()
+```
 
 Ми додали функцію **parse\_input(user\_input)** яка приймає рядок вводу користувача **user\_input** і розбиває його на слова за допомогою методу **split()**. Вона повертає перше слово як команду **cmd** та решту як список аргументів **\*args**. Рядок коду **cmd, \*args = user\_input.split()** розділяє рядок на слова. Перше слово зберігається у змінній **cmd**, а решта зберігається у списку **args** завдяки оператору розпакування \*. Далі рядок коду **cmd = cmd.strip().lower()** видаляє зайві пробіли навколо команди та перетворює її на нижній регістр.
 
@@ -344,7 +361,8 @@ if __name__ == "__main__":
 Припустимо, користувач вводить команду як "HELLO", "Hello" або "hello". Якщо не привести ці варіанти до спільного регістру, вони будуть розглядатися як різні команди, і вам доведеться обробляти кожний варіант окремо.
 
 ```
-Приведення команди до нижнього регістру дозволяє уникнути цього, перетворюючи всі варіанти на одну та ту ж форму. Таким чином, ви можете легко порівнювати введену команду з попередньо визначеними командами без зважання на те, як користувач ввів її.  Це забезпечує кращий досвід користувача, оскільки програма стає менш чутливою до конкретного способу введення команд.```
+Приведення команди до нижнього регістру дозволяє уникнути цього, перетворюючи всі варіанти на одну та ту ж форму. Таким чином, ви можете легко порівнювати введену команду з попередньо визначеними командами без зважання на те, як користувач ввів її.  Це забезпечує кращий досвід користувача, оскільки програма стає менш чутливою до конкретного способу введення команд.
+```
 
 Отриманий результат в функції main ми отримаємо після виконання рядка коду **command, \*args = parse\_input(user\_input)** .
 
@@ -392,13 +410,16 @@ if __name__ == "__main__":
 Всередині функції, два елементи зі списку **args** розпаковуються в змінні **name** та **phone**. Функція далі додає пару "ключ: значення" до словника контактів, використовуючи ім'я як ключ і телефонний номер як значення contacts\[name\] = phone.
 
 ```
-☝ Треба зауважити, що, якщо контакт з таким ім'ям вже існує, його дані будуть перезаписані без будь-яких попереджень. Тут ви вже можете діяти на свій розсуд, хочете чи ні ви обробляти колізію, в нашому варіанті ми перезаписуємо контакт.```
+☝ Треба зауважити, що, якщо контакт з таким ім'ям вже існує, його дані будуть перезаписані без будь-яких попереджень. Тут ви вже можете діяти на свій розсуд, хочете чи ні ви обробляти колізію, в нашому варіанті ми перезаписуємо контакт.
+```
 
 Функція add\_contact повертає рядок, що підтверджує успішне додавання контакту: "Contact added.".
 
 Необхідно зауважити, що ця функція не має вбудованих перевірок на помилки введення. Наприклад, якщо **args** не містить двох елементів, ця функція викличе помилку **ValueError**.
 
-```ValueError: not enough values to unpack (expected 2, got 0)```
+```
+ValueError: not enough values to unpack (expected 2, got 0)
+```
 
 Обробку помилок в цьому домашньому завданні залиште на свій розсуд, бо в наступному домашньому завданні ми додамо обробку помилок через декоратори.
 
